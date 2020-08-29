@@ -13,3 +13,10 @@
     state: present
   with_items:
     openjdk-8-jdk
+- name: Install Maven
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    maven
