@@ -1,6 +1,6 @@
 ---
 #
-# Playbook to install the EMS 
+# Playbook to install the ELK stack + Beats
 #
 - hosts: node
   remote_user: root
@@ -8,4 +8,9 @@
   become_user: root
   roles:
   - { role: java }
- 
+  - { role: elasticsearch }
+  - { role: logstash }
+  - { role: kibana }
+  - { role: metricbeat }
+  - { role: some-data }
+  - { role: restart-services }
