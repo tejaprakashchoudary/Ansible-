@@ -1,5 +1,6 @@
 ---
 #
+#Updating Repo in Remote server
 #
 - name: Update APT package manager repositories cache
   apt:
@@ -8,7 +9,7 @@
 - name: Install OpenJDK Java
   become: yes
   apt:
-    name: "{{ item }}"
+    name: java
     state: present
   with_items:
     openjdk-8-jdk
