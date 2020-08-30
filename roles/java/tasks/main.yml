@@ -5,7 +5,7 @@
 - name: Update APT package manager repositories cache
   apt:
     update_cache: yes
-
+# Installing Java package
 - name: Install OpenJDK Java
   become: yes
   apt:
@@ -13,6 +13,7 @@
     state: present
   with_items:
     openjdk-8-jdk
+# Installing Maven package
 - name: Install Maven
   become: yes
   apt:
@@ -20,3 +21,11 @@
     state: present
   with_items:
     maven
+# Installing Yarn package
+- name: Install Yarn 
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    yarn
