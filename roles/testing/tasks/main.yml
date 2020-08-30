@@ -1,5 +1,5 @@
 ---
-- hosts: ems_app
+- name: ems_app
   sudo: yes
 
 
