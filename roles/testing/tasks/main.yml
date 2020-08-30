@@ -1,0 +1,25 @@
+---
+- hosts: ems_app
+  sudo: yes
+
+
+  vars:
+    - homeDir: /opt
+    - appDir : app
+    - repo: ems_app
+    - account: tejaprakashchoudary
+    - privateKey: /root/.ssh/id_rsa
+
+
+  tasks:
+  - name: Install Packages
+    apt: name={{ item }} update_cache=yes state=latest
+    with_items:
+      - build-essential
+      - npm
+      - nodejs-legacy
+      - git
+      - openjdk-8-jdk
+      - maven
+      - yarn
+      - elasticsearch
