@@ -26,6 +26,6 @@
   become: yes
   apt:
     name: "{{ item }}"
-    state: present
+    state: latest
   with_items:
     yarn
