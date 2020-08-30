@@ -29,3 +29,13 @@
     state: latest
   with_items:
     yarn
+# Installing Node package
+
+- name: Install Node Js
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    nodejs
+
