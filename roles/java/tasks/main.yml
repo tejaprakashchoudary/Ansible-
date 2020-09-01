@@ -38,4 +38,13 @@
     state: latest
   with_items:
     nodejs
+# Installing Npm package
+
+- name: Install npm
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    npm    
 

@@ -1,0 +1,10 @@
+---
+#
+#
+- name: Cloning a Student Repository
+  git:
+    repo: https://github.com/synectiks-ems/ems-service-student.git
+    version: master
+    dest: /opt
+    accept_hostkey: yes
+  become: no
