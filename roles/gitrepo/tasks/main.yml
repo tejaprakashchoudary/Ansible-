@@ -10,6 +10,7 @@
     version: master
     dest: /opt
     accept_hostkey: yes
-  become: 
+  become: yes
+  tags:
     student_git
   
