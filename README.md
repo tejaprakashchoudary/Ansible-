@@ -1,6 +1,6 @@
 # Ansible EMS Playbook
  
-This playbook is for setting up EMS application on a remote server which was develop Synectiks IT cosulting Pvt.Ltd. 
+This playbook is for setting up EMS application on a remote server which was developed by Synectiks IT cosulting Pvt.Ltd. 
 
 ## Notes and requirements
 
